@@ -19,15 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button testButton = (Button) findViewById(R.id.testButton);
-
-            testButton.setOnClickListener(new BtnClickListener());
+        Button testMail = (Button) findViewById(R.id.testButton);
+        testMail.setOnClickListener(new testMailBtn());
     }
-    class BtnClickListener implements View.OnClickListener{
+    class testMailBtn implements View.OnClickListener{
         @Override
         public void onClick(View v){
             m1 m1=new m1();
             m1.start();
+
             Toast.makeText(MainActivity.this,"错误"+ex, Toast.LENGTH_SHORT).show();
         }
     }

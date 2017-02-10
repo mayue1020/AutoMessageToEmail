@@ -31,7 +31,7 @@ public class SendMail {
 		message.setSubject(mailTitle);//设置标题  
 		//设置信件内容  
 		//message.setText(mailContent); //发送 纯文本 邮件 todo  
-		message.setContent(mailContent, "text/html;charset=gbk"); //发送HTML邮件，内容样式比较丰富  
+		message.setContent(mailContent, "text/html;charset=utf-8"); //发送HTML邮件，内容样式比较丰富
 		//message.setSentDate(new Date());//设置发信时间
 		message.saveChanges();//存储邮件信息  
 		
@@ -52,8 +52,8 @@ public class SendMail {
 				"<!DOCTYPE html>\n" +
 						"<html>\n" +
 						"<head>" +
-						"<meta charset=\"gb2312\">" +
-						"<a>html 元素</a>：<b>邮件内容</b></body></html>"
+						"<meta charset=\"gb18030\">" +
+						"<a>html 元素</a>：<b>邮件内容邮件内容</b></body></html>"
 		);
 	}
 }
